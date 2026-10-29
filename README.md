@@ -66,7 +66,7 @@ ADB ist ein kostenloses Programm von Google, mit dem der PC Apps auf den Fire TV
 
 **Am Fire TV:**
 1. **Einstellungen → Mein Fire TV → Entwickleroptionen → ADB-Debugging** auf **AN** stellen.
-2. Die IP-Adresse des Fire TV notieren: **Einstellungen → Mein Fire TV → Info → Netzwerk** (z. B. `192.168.178.39`).
+2. Die IP-Adresse des Fire TV notieren: **Einstellungen → Mein Fire TV → Info → Netzwerk** (z. B. `your.ip`).
 
 **Am PC:**
 1. Die **[Android SDK Platform-Tools](https://developer.android.com/tools/releases/platform-tools)** für dein System herunterladen und den ZIP-Ordner entpacken (z. B. nach `C:\platform-tools`). Eine Installation ist nicht nötig.
@@ -76,7 +76,7 @@ ADB ist ein kostenloses Programm von Google, mit dem der PC Apps auf den Fire TV
    - **macOS / Linux:** Terminal öffnen und mit `cd` in den Ordner wechseln.
 4. Verbinden (deine IP-Adresse einsetzen):
    ```bash
-   adb connect 192.168.178.39:5555
+   adb connect yourip5555
    ```
    (Unter macOS/Linux ggf. `./adb` statt `adb` schreiben.)
 5. **Am Fernseher** erscheint jetzt „USB-Debugging zulassen?“. Haken bei **„Von diesem Computer immer zulassen“** setzen und **OK** drücken.
