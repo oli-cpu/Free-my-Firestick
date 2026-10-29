@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<accessibility-service xmlns:android="http://schemas.android.com/apk/res/android"
+    android:description="Free My TV: shows Free My TV whenever the Fire TV home comes up. Reads only which app is in front, no screen content."
+    android:accessibilityEventTypes="typeWindowStateChanged"
+    android:accessibilityFeedbackType="feedbackGeneric"
+    android:notificationTimeout="0"
+    android:canRetrieveWindowContent="false" />

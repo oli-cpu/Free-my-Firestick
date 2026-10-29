@@ -1,0 +1,48 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'org.freemytv.firetv'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId 'org.freemytv.firetv'
+        minSdk 22          // Fire OS 5
+        targetSdk 29       // keeps full app visibility for listApps() on Fire OS 8 (Android 11)
+        versionCode 10302
+        versionName '1.3.2-firetv'
+    }
+
+    // The web UI (web/www) is shipped as assets/www
+    sourceSets {
+        main {
+            assets.srcDirs = ['../../web']
+        }
+    }
+
+    signingConfigs {
+        shared {
+            // Same throwaway key as the standalone build, so both APKs can update each other.
+            storeFile file('../../signing/freemytv.keystore')
+            storePassword 'freemytv'
+            keyAlias 'freemytv'
+            keyPassword 'freemytv'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.shared
+        }
+        debug {
+            signingConfig signingConfigs.shared
+        }
+    }
+
+    lint {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+}
